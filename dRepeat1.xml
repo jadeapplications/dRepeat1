@@ -1,6 +1,6 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="comment_comment" id="9" x="11" y="0">
-    <field name="TEXT">dRepeate1 - Test Operation of the "repeat" Block</field>
+    <field name="TEXT">dRepeat1 - Test Operation of the "repeat" Block</field>
     <next>
       <block type="variables_set" id="12" inline="true">
         <field name="VAR">i</field>
