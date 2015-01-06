@@ -1,0 +1,105 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="comment_comment" id="9" x="11" y="0">
+    <field name="TEXT">dRepeate1 - Test Operation of the "repeat" Block</field>
+    <next>
+      <block type="variables_set" id="12" inline="true">
+        <field name="VAR">i</field>
+        <value name="VALUE">
+          <block type="math_number" id="19">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="oled_cleardisplay" id="29">
+            <next>
+              <block type="controls_repeat" id="7" inline="true">
+                <value name="TIMES">
+                  <block type="math_number" id="20">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="oled_setcursor" id="38" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="45">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_arithmetic" id="71" inline="true">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="math_arithmetic" id="52" inline="true">
+                            <field name="OP">MINUS</field>
+                            <value name="A">
+                              <block type="variables_get" id="57">
+                                <field name="VAR">i</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="64">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="72">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawtext" id="90">
+                        <field name="TEXT">Loop </field>
+                        <next>
+                          <block type="oled_drawnumber" id="99" inline="true">
+                            <value name="NUMBER">
+                              <block type="variables_get" id="104">
+                                <field name="VAR">i</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="109" inline="true">
+                                <field name="VAR">i</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="116" inline="true">
+                                    <field name="OP">ADD</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="125">
+                                        <field name="VAR">i</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="132">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="robot_delay" id="134" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="141">
+                                        <field name="NUM">250</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
